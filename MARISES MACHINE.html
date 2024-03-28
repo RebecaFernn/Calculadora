@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<!-- saved from url=(0066)file:///C:/Users/Marise%20Miranda/Downloads/Marises%20Machine.html -->
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <link rel="shortcut icon" href="imgs/icone.png" type="image/x-icon"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marise's Machine</title>
+    <link rel="stylesheet" href="MACHINE.css">
+</head>
+
+<body>
+
+    <div class="barrinha">
+        <h1>Marise's Machine</h1>
+    </div>
+
+    <br>
+    <div class="contas">
+        <div class="decimal">
+            <br>
+            <div class="Parte1">
+
+                <h3>Decimal</h3>
+                <input id="demo1" type="text" placeholder="Digite o valor em decimal">
+                <br>
+
+                <button onclick="converter()">Converter</button>
+            </div>
+            <br>
+            <div class="resultados">
+                <br>
+                <div class="escrita">
+                    <b>Octal</b>
+                    <b>Hexadecimal</b>
+                    <b>Binário</b>
+                </div>
+                <br>
+                <div class="resultados2">
+                    <div class="caixas" id="demo2"></div>
+                    <div class="caixas" id="demo3"></div>
+                    <div class="caixas" id="demo4"></div>
+                </div>
+            </div>
+        </div>
+        <div class="octal">
+            <br>
+            <div class="Parte1">
+
+                <h3>Octal</h3>
+                <input id="demo8" type="text" placeholder="Digite o valor em octal">
+                <br>
+
+                <button onclick="converter_octal()">Converter</button>
+            </div>
+            <br>
+            <div class="resultados">
+                <br>
+                <div class="escrita">
+                    <b>Decimal</b>
+                    <b>Hexadecimal</b>
+                    <b>Binário</b>
+                </div>
+                <br>
+                <div class="resultados2">
+                    <div class="caixas" id="demo_1"></div>
+                    <div class="caixas" id="demo_2"></div>
+                    <div class="caixas" id="demo_3"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+    <div class="contas">
+        <div class="decimal">
+            <br>
+            <div class="Parte1">
+
+                <h3>Binario</h3>
+                <input id="demo01" type="text" placeholder="Digite o valor em binário">
+                <br>
+
+                <button onclick="converter_binario()">Converter</button>
+            </div>
+            <br>
+            <div class="resultados">
+                <br>
+                <div class="escrita">
+                    <b>Octal</b>
+                    <b>Hexadecimal</b>
+                    <b>Decimal</b>
+                </div>
+                <br>
+                <div class="resultados2">
+                    <div class="caixas" id="demo02"></div>
+                    <div class="caixas" id="demo03"></div>
+                    <div class="caixas" id="demo04"></div>
+                </div>
+            </div>
+        </div>
+        <div class="decimal">
+            <br>
+            <div class="Parte1">
+
+                <h3>Hexadecimal</h3>
+                <input id="demoH" type="text" placeholder="Digite o valor em hexadecimal">
+                <br>
+
+                <button onclick="converter_hexa()">Converter</button>
+            </div>
+            <br>
+            <div class="resultados">
+                <br>
+                <div class="escrita">
+                    <b>Octal</b>
+                    <b>Decimal</b>
+                    <b>Binário</b>
+                </div>
+                <br>
+                <div class="resultados2">
+                    <div class="caixas" id="demoA"></div>
+                    <div class="caixas" id="demoB"></div>
+                    <div class="caixas" id="demoC"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br><br>
+    <div class="final">
+        <h2>Contato </h2>
+        <h3>rebeca.santos@sptech.school</h3>
+        <h3>izabelle.figueiredo@sptech.school</h3>
+
+    </div>
+
+
+
+
+
+    <script>
+
+        function converter() {
+
+            var decimal = Number(demo1.value);
+
+            let octal = decimal.toString(8);
+
+            let hexadecimal = decimal.toString(16);
+
+            let binaria = decimal.toString(2);
+
+            console.log(decimal);
+            console.log(octal);
+            console.log(hexadecimal);
+            console.log(binaria);
+
+            document.getElementById("demo1").innerHTML = ` ${decimal}`;
+            document.getElementById("demo2").innerHTML = ` ${octal}`;
+            document.getElementById("demo3").innerHTML = ` ${hexadecimal}`;
+            document.getElementById("demo4").innerHTML = ` ${binaria}`;
+
+        }
+
+
+        function converter_octal() {
+
+            var octal8 = Number(demo8.value);
+
+            let octal = parseInt(octal8, 8);
+
+            let decimal = octal.toString(10);
+
+            let hexadecimal = octal.toString(16);
+
+            let binaria = octal.toString(2);
+
+            console.log(decimal);
+            console.log(octal);
+            console.log(hexadecimal);
+            console.log(binaria);
+
+            document.getElementById("demo8").innerHTML = ` ${octal}`;
+            document.getElementById("demo_1").innerHTML = ` ${decimal}`;
+            document.getElementById("demo_2").innerHTML = ` ${hexadecimal}`;
+            document.getElementById("demo_3").innerHTML = ` ${binaria}`;
+
+
+        }
+
+        function converter_binario() {
+
+            var binario01 = demo01.value;
+
+            let binario = parseInt(binario01, 2)
+
+            let decimal = binario.toString(10);
+
+            let hexadecimal = binario.toString(16);
+
+            let octal = binario.toString(8);
+
+            console.log(decimal);
+            console.log(octal);
+            console.log(hexadecimal);
+            console.log(binario);
+
+            document.getElementById("demo02").innerHTML = ` ${octal}`;
+            document.getElementById("demo04").innerHTML = ` ${decimal}`;
+            document.getElementById("demo03").innerHTML = ` ${hexadecimal}`;
+            document.getElementById("demo01").innerHTML = ` ${binario}`;
+
+
+        }
+        function converter_hexa() {
+
+            var hexaa = demoH.value;
+
+            let hexa = parseInt(hexaa, 16);
+
+            let decimal = hexa.toString(10);
+
+            let octal = hexa.toString(8);
+
+            let binaria = hexa.toString(2);
+
+            console.log(decimal);
+            console.log(octal);
+            console.log(hexa);
+            console.log(binaria);
+
+            document.getElementById("demoA").innerHTML = ` ${octal}`;
+            document.getElementById("demoB").innerHTML = ` ${decimal}`;
+            document.getElementById("demoH").innerHTML = ` ${hexa}`;
+            document.getElementById("demoC").innerHTML = ` ${binaria}`;
+
+
+        }
+        document.bgColor = "#00ffff";
+    </script>
+</body>
+
+</html>
